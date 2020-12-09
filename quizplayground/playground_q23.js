@@ -99,23 +99,23 @@
 //     .then(writer);
 //
 
-// const idPromise = x => new Promise(resolve => resolve(x));
-//
-// const writer = x => {
-//     document.writeln(x);
-//     return idPromise(x);
-// }
-// const filterEven = n => {
-//     if (n % 2 === 0) return n;
-//     else throw Error("not even")
-// };
-//
-// idPromise(1)
-//     .then(writer)
-//     .then(filterEven)
-//     .then(writer)
-//     .catch(err => {
-//     });
+const idPromise = x => new Promise(resolve => resolve(x));
+
+const writer = x => {
+    document.writeln(x);
+    return idPromise(x);
+}
+const filterEven = n => {
+    if (n % 2 === 0) return n;
+    else throw Error("not even")
+};
+
+idPromise(1)
+    .then(writer)
+    .then(filterEven)
+    .then(writer)
+    .catch(err => {
+    });
 
 // const idPromise = x => new Promise(resolve => resolve(x));
 //
