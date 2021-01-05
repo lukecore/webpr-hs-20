@@ -11,4 +11,4 @@ document.writeln(palindrome("Amore, Roma!")
     && palindrome("Madam, I'm Adam!")
     && palindrome("Never odd or even.")
     && !palindrome("Amore")
-);
+);33
