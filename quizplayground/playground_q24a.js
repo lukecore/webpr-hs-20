@@ -1,6 +1,6 @@
 const NullSafe = x => {
     const isNullSafe = y => y && y.then;
-    const maywrap = y => NullSafe(y); // if y is not NullSafe yet, make it so
+    const maywrap = y => NullSafe(y);
     return {
         then: fn => {
             if (!x) {
@@ -11,7 +11,7 @@ const NullSafe = x => {
             } else {
                 return maywrap(fn(x))
             }
-        }// see(1)
+        }
     }
 };
 
